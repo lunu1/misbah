@@ -1,12 +1,21 @@
 import './App.css'
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './Pages/Home';
+
 
 function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+
+<Router>
+<Navbar/>
+  <Routes>
+    <Route path='/' element={<Home/>}/>
+  </Routes>
+</Router>
+
     </>
   )
 }
